@@ -1,0 +1,49 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-04-04 10:44:51
+ * @LastEditTime: 2020-04-04 13:26:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /debounce-throttle/demo/debounce/how/index.html
+ -->
+<!--
+ * 讲一下这个debounce如何使用
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>如何使用Debounce</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h1>如何使用Debounce</h1>
+  <div class="animationArea" id="animation1">
+    <a class="trigger-area">触发区域</a>
+    <a class="reset">重置</a>
+    <div class="visualizations">
+    <h2>原始事件调用</h2>
+    <div class="events raw-events"></div>
+    <h2>防抖事件调用
+      <span class="details">设置参数：400ms（延迟时间为400毫秒）, trailing（防抖定时器执行时调用函数）</span></h2>
+    <div class="events debounced-events"></div>
+    </div>
+  </div>
+
+  <div class="animationArea" id="animation2">
+    <a class="trigger-area">触发区域</a>
+    <a class="reset">重置</a>
+    <div class="visualizations">
+    <h2>原始事件调用</h2>
+    <div class="raw-events events"></div>
+    <h2>防抖事件调用
+      <span class="details">设置参数：400ms（延迟时间为400毫秒）, leading（设置防抖定时器后立即调用函数）</span></h2>
+    <div class="events debounced-events"></div>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</html>

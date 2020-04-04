@@ -1,0 +1,33 @@
+body {
+  background: #444444;
+  color: white;
+   font: 15px/1.51 system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  margin:0 auto;
+  max-width:600px;
+  padding:20px;
+  min-height:1000vh; /* 100 times viewport height */
+}
+h1 {
+  color: #5ed1ff;
+  margin-bottom: 30px;
+  position: fixed;
+  top:20px;
+  left:40%;
+}
+
+#counter {
+ position:fixed;
+ top:200px;
+ left:40%;
+ font-size:50px;
+}
+.reset {
+ position: fixed;
+ top:100px;
+ left:40%;
+ color:white;
+ text-decoration:none;
+ border:1px solid white;
+ padding:10px 20px;
+ background:rgba(0,0,0,0.1);
+}

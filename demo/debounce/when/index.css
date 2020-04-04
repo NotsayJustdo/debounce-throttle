@@ -1,0 +1,60 @@
+body {
+  font: 15px/1.51 system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+h1 {
+  color: #5ed1ff;
+  margin-bottom: 30px;
+}
+.demo .container {
+  display: inline-block;
+  height: 300px;
+  width: 500px;
+  min-width: 400px;
+  min-height: 200px;
+  overflow: hidden;
+  resize: both;
+  vertical-align: top;
+  font-size: 0px;
+  border: 1px solid #5ed1ff;
+}
+.demo .container .panel {
+  display: inline-block;
+  overflow-y: auto;
+  width: 50%;
+  font-size: 16px;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.demo .container .left-panel {
+  background: #ccc;
+  color:black;
+}
+
+.inputDemo {
+  color: white;
+  margin-top: 40px;
+}
+
+form {
+  background-color: #333;
+  width:500px;
+  height: 160px;
+  padding: 20px;
+  display: inline-block;
+}
+
+input {
+  padding:8px 20px;
+  border-radius: 2px;
+  border:0;
+  font-size:20px;
+}
+.status-key,
+.status-ajax {
+  margin:10px 0;
+}
+.status-ajax {
+  color:#99FF7E;
+}

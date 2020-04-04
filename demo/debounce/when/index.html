@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Debounce的应用场景</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="demo resizeDemo">
+    <h1>Resize</h1>
+    <div class="container">
+      <div class="panel left-panel">Raw resize events<br></div>
+      <div class="panel right-panel">Debounced events<br></div>
+    </div>
+  </div>
+
+
+  <div class="demo inputDemo">
+    <h1>Input</h1>
+    <form>
+      <div class="status-key">输入字符，当停止输入时会检测到</div>
+      <input type="text" class="autocomplete">
+      <div class="status-ajax"></div>
+    </form>
+  </div>
+</body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lodash@4.17.15/lodash.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="./index.js"></script>
+</html>
