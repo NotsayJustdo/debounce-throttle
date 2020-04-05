@@ -2,16 +2,19 @@
 
 作用：降低函数执行频率。
 
-举例：当页面发生滚动时，由于滚动事件是连续触发的，这样下面代码中的handler会被执行很多次，如果每次都执行这个handler中的代码，也许这些代码修改了DOM等，这样是很消耗性能的。
+以下的例子我们使用[lodash](https://lodash.com/docs/4.17.15)中封装的防抖和节流进行举例
+
+## 使用防抖和节流的原因
+例如：当页面发生滚动时，由于滚动事件是连续触发的，这样下面代码中的handler会被执行很多次，如果每次都执行这个handler中的代码，也许这些代码修改了DOM等，这样是很消耗性能的。
 ```
 $(window).on('scroll', handler);
 ```
-需要采取一定的策略来降低handler里面代码的执行频率，我们可以使用_.debounce(handler, 200)来封装出一个新的handler出来，比如下面的`debouncedHandler`，在这个新返回的函数里面使用了定时器来降低原来handler函数的执行频率
+## 原理
 ```
-var debouncedHandler = _.debounce(doSomething, 200); // 调用_.debounce这个函数时会创建一些变量，这些变量会在debouncedHandler函数执行时使用
+var debouncedHandler = _.debounce(doSomething, 200);
 $(window).on('scroll', debouncedHandler);
 ```
-原理：调用_.debounce这个函数时会创建一些变量，这些变量会在debouncedHandler函数执行时使用，其实这个`debouncedHandler`在这个滚动事件中的是每次都调用的，只是在调用这个`debouncedHandler`时，设置了定时器来降低作为参数传入的函数doSomething的调用频率，这样的话就可以不用每次都调用doSomething里面的代码
+调用_.debounce(handler, 200)时会创建一些变量并返回一个新的函数debouncedHandler，这些变量会在debouncedHandler函数执行时使用，其实这个`debouncedHandler`在这个滚动事件中的是每次都调用的，只是在调用这个`debouncedHandler`时，设置了定时器来降低作为参数传入的函数doSomething的调用频率，这样的话就可以不用每次都调用doSomething里面的代码
 
 ## 防抖(debounce)
 防抖可以使连续的触发事件的回调函数只在开始或者结束时候才被执行的，它触发的时间不是间隔相等的时间触发的。
